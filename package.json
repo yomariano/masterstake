@@ -5,27 +5,22 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "./node_modules/nodemon/bin/nodemon.js ./api/src/index.js",
-    "test": "./node_modules/mocha/bin/mocha **/test/**/*.test.js",
-    "precommit": "lint-staged",
-    "pre-push": "npm test"
+    "test": "./node_modules/mocha/bin/mocha **/test/**/*.test.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"]
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yomariano/masterstake.git"
   },
-  "keywords": [
-    "Proof of Stake",
-    "Masternode",
-    "PIVX",
-    "DASH",
-    "Crytocurrency"
-  ],
+  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
   "author": {
     "name": "Mariano Rodriguez",
     "email": "yomariano05@gmail.com",
