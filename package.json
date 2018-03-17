@@ -1,22 +1,31 @@
 {
-  "name": "masterstake-backend",
+  "name": "masterstake",
   "version": "0.0.1",
-  "description": "Masterstake backend API",
+  "description": "Masterstake",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js ./index.js",
-    "test": "./node_modules/mocha/bin/mocha ./test/**/*.test.js",
+    "server-dev": "./node_modules/nodemon/bin/nodemon.js ./api/src/index.js",
+    "test": "./node_modules/mocha/bin/mocha **/test/**/*.test.js",
     "precommit": "lint-staged",
     "pre-push": "npm test"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yomariano/masterstake.git"
   },
-  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
+  "keywords": [
+    "Proof of Stake",
+    "Masternode",
+    "PIVX",
+    "DASH",
+    "Crytocurrency"
+  ],
   "author": {
     "name": "Mariano Rodriguez",
     "email": "yomariano05@gmail.com",
@@ -31,7 +40,9 @@
     "url": "https://github.com/yomariano/masterstake/issues"
   },
   "homepage": "https://github.com/yomariano/masterstake#readme",
-  "dependencies": { "fastify": "^1.1.1" },
+  "dependencies": {
+    "fastify": "^1.1.1"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^3.0.0",
