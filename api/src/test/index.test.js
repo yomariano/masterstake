@@ -1,5 +1,5 @@
 const tap = require("tap");
-const buildFastify = require("./app");
+const buildFastify = require("./../app");
 
 tap.test("GET `/` route", t => {
   t.plan(4);

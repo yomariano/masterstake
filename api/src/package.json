@@ -4,20 +4,14 @@
   "description": "Masterstake backend API",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./node_modules/nodemon/bin/nodemon.js ./index.js",
-    "test": "node ./node_modules/mocha/bin/mocha ./**/*.test.js"
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./index.js",
+    "test": "./node_modules/mocha/bin/mocha ./test/**/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yomariano/masterstake.git"
   },
-  "keywords": [
-    "Proof of Stake",
-    "Masternode",
-    "PIVX",
-    "DASH",
-    "Crytocurrency"
-  ],
+  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
   "author": {
     "name": "Mariano Rodriguez",
     "email": "yomariano05@gmail.com",
