@@ -2,7 +2,7 @@ const tap = require("tap");
 const buildFastify = require("./../app");
 
 tap.test("GET `/` route", t => {
-  t.plan(4);
+  t.plan(1);
 
   const fastify = buildFastify();
 
@@ -16,10 +16,7 @@ tap.test("GET `/` route", t => {
       url: "/"
     },
     (err, response) => {
-      t.error(err);
-      t.strictEqual(response.statusCode, 200);
-      t.strictEqual(response.headers["content-type"], "application/json");
-      t.deepEqual(JSON.parse(response.payload), { hello: "world" });
+      t.deepEqual(JSON.parse(response.payload), { master: "stake" });
     }
   );
 });

@@ -14,13 +14,22 @@
     }
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yomariano/masterstake.git"
   },
-  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
+  "keywords": [
+    "Proof of Stake",
+    "Masternode",
+    "PIVX",
+    "DASH",
+    "Crytocurrency"
+  ],
   "author": {
     "name": "Mariano Rodriguez",
     "email": "yomariano05@gmail.com",
@@ -36,7 +45,10 @@
   },
   "homepage": "https://github.com/yomariano/masterstake#readme",
   "dependencies": {
-    "fastify": "^1.1.1"
+    "fastify": "^1.1.1",
+    "fastify-plugin": "^0.2.2",
+    "mongoose": "^5.0.10",
+    "nconf": "^0.10.0"
   },
   "devDependencies": {
     "husky": "^0.14.3",
