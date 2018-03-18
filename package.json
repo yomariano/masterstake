@@ -46,6 +46,7 @@
   "homepage": "https://github.com/yomariano/masterstake#readme",
   "dependencies": {
     "fastify": "^1.1.1",
+    "fastify-multipart": "^0.4.1",
     "fastify-plugin": "^0.2.2",
     "mongoose": "^5.0.10",
     "nconf": "^0.10.0"
