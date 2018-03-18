@@ -5,3 +5,7 @@ const iAmJavascriptES6 = () => console.log(...arr);
 window.iAmJavascriptES6 = iAmJavascriptES6;
 
 import App from "./App";
+// import font from './assets/css/font-awesome.min.css'
+import css from './assets/css/main.css';
+
+

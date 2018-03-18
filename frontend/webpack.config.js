@@ -21,10 +21,29 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        options: {
-          includePaths: ["src/assets/css"]
-        },
-        loader: "style-loader!css-loader"
+        loaders: ["style-loader","css-loader"]
+      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: 'images/[name].[ext]'
+      //       }  
+      //     }
+      //   ]
+      // },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   },

@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import pic01  from './images/pic01.jpg';
+import pic02  from './images/pic02.jpg';
+import pic03  from './images/pic03.jpg';
+import pic04  from './images/pic04.jpg';
 
 const App = () => {
   return (
@@ -176,7 +180,7 @@ const App = () => {
 								<div className="6u 12u(narrower)">
 
 									<section>
-										<a href="#" className="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="#" className="image featured"><img src={pic01} alt="" /></a>
 										<header>
 											<h3>A Really Fast Train</h3>
 										</header>
@@ -187,7 +191,7 @@ const App = () => {
 								<div className="6u 12u(narrower)">
 
 									<section>
-										<a href="#" className="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" className="image featured"><img src={pic02} alt="" /></a>
 										<header>
 											<h3>An Airport Terminal</h3>
 										</header>
@@ -200,7 +204,7 @@ const App = () => {
 								<div className="6u 12u(narrower)">
 
 									<section>
-										<a href="#" className="image featured"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" className="image featured"><img src={pic03} alt="" /></a>
 										<header>
 											<h3>Hyperspace Travel</h3>
 										</header>
@@ -211,7 +215,7 @@ const App = () => {
 								<div className="6u 12u(narrower)">
 
 									<section>
-										<a href="#" className="image featured"><img src="images/pic04.jpg" alt="" /></a>
+										<a href="#" className="image featured"><img src={pic04} alt="" /></a>
 										<header>
 											<h3>And Another Train</h3>
 										</header>
