@@ -5,7 +5,9 @@ npm i && npm run start
 ```
 ## Production
 
+```bash
 npm run build
+```
 
 ## License
 
