@@ -1,6 +1,8 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
+  entry:  ["./src/index.js", './src/assets/sass/main.scss', './src/assets/sass/ie8.scss', './src/assets/sass/ie9.scss'],
   module: {
     rules: [
       {
@@ -19,9 +21,12 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.css$/,
-        loaders: ["style-loader","css-loader"]
+
+      { // css / sass / scss loader for webpack
+        test: /\.(css|sass|scss)$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader'],
+        })
       },
       // {
       //   test: /\.(png|jpg|gif|svg)$/,
@@ -48,6 +53,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin({
+      filename: '[name].css',
+    }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
