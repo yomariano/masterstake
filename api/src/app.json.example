@@ -5,5 +5,12 @@
     "dbName": "dbName",
     "user": "user",
     "passwd": "passwd"
+  },
+  oauth: {
+    google: {
+      clientId: '',
+      secret: '',
+      callbackUrl: ''
+    }
   }
 }

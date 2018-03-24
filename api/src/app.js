@@ -15,7 +15,6 @@ function buildFastify() {
   const fastify = Fastify();
 
   fastify.register(require("fastify-multipart"));
-  fastify.register(require("fastify-accepts"));
 
   nconf
     .argv()
