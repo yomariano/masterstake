@@ -6,7 +6,6 @@ const postSignin = require("./endpoints/postSignin");
 const postJoin = require("./endpoints/postJoin");
 const getMasternodes = require("./endpoints/getMasternodes");
 const getMyMasternodes = require("./endpoints/getMyMasternodes");
-const verifyBodyTypePlugin = require("./verifyBodyTypePlugin");
 const { usersSchema, nodesSchema } = require("./mongooseSchemas");
 
 const users = mongoose.model("users", usersSchema);
@@ -15,7 +14,6 @@ const nodes = mongoose.model("nodes", nodesSchema);
 function buildFastify() {
   const fastify = Fastify();
 
-  //verifyBodyTypePlugin(fastify);
   fastify.register(require("fastify-multipart"));
   fastify.register(require("fastify-accepts"));
 
