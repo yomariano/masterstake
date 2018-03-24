@@ -47,10 +47,10 @@ const postSignin = {
       const savedUser = await user.save();
       reply.code(200).send(savedUser._id);
     } catch (e) {
-      console.log(e);
       if (e.name === "BulkWriteError" && e.code === 11000) {
         reply.code(400).send("Please choose another username.");
       }
+      console.log(e);
       reply.code(500).send("Ups, something happened.");
     }
   }
