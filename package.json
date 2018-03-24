@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "./node_modules/nodemon/bin/nodemon.js ./api/src/index.js",
-    "test": "./node_modules/tap/bin/run.js './{,!(node_modules)/**}/*.test.js'"
+    "test": "./node_modules/tap/bin/run.js './{,!(node_modules)/**}/*.test.js'",
+    "start": "node ./api/src",
+    "docker-build": "./scripts/build.sh",
+    "docker-start": "./scripts/start.sh"
   },
   "husky": {
     "hooks": {
