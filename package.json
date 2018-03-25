@@ -45,6 +45,8 @@
   },
   "homepage": "https://github.com/yomariano/masterstake#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
     "fastify": "^1.1.1",
     "fastify-multipart": "^0.4.1",
     "fastify-plugin": "^0.2.2",
