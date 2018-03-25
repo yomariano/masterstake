@@ -10,29 +10,11 @@
     "docker-build": "./scripts/build.sh",
     "docker-start": "./scripts/start.sh"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "cd api/src && npm test"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yomariano/masterstake.git"
   },
-  "keywords": [
-    "Proof of Stake",
-    "Masternode",
-    "PIVX",
-    "DASH",
-    "Crytocurrency"
-  ],
+  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
   "author": {
     "name": "Mariano Rodriguez",
     "email": "yomariano05@gmail.com",
@@ -55,8 +37,6 @@
     "nconf": "^0.10.0"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
     "nodemon": "^1.17.2",
     "prettier": "^1.11.1",
     "tap": "^11.1.2"

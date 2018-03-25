@@ -9,6 +9,7 @@ const dbPlugin = function(fastify, opts, next) {
     }`
   );
   delete opts.store;
+
   const db = mongoose.connection;
   db.on("error", console.error.bind(console, "connection error:"));
   db.once("open", function() {
