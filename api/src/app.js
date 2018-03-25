@@ -18,7 +18,9 @@ const nodes = mongoose.model("nodes", nodesSchema);
 function buildFastify() {
   const fastify = Fastify();
 
-  fastify.register(require("fastify-multipart"));
+  fastify.register(require("fastify-cookie"), err => {
+    if (err) throw err;
+  });
 
   nconf
     .argv()
@@ -48,27 +50,39 @@ function buildFastify() {
   fastify.use(passport.initialize());
 
   fastify.get(
-    "/auth/g/back",
-    passport.authenticate("google", { failureRedirect: "/" }),
-    (req, res) => {
-      req.raw.session.token = req.raw.user.token;
-      res.redirect("/");
-    }
+    "/auth/g",
+    passport.authenticate("google", {
+      scope: "https://www.googleapis.com/auth/userinfo.email"
+    })
   );
+
+  fastify.get("/auth/g/back", (req, res) => {
+    console.log(req.body);
+    console.log(req.params);
+    console.log(req.headers);
+    passport.authenticate("google", { failureRedirect: "/" }),
+      (req, res) => {
+        req.raw.session.token = req.user.token;
+        res.code(302).header("Location", "/");
+      };
+  });
 
   fastify.get("/", (req, res) => {
     const { session } = req.raw;
-    console.log(res.raw.IncomingMessage.cookies);
-    res.send();
-    return;
     if (session.token) {
-      res.cookie("token", session.token);
-      res.json({
+      res.setCookie("token", session.token, {
+        domain: req.headers.host,
+        path: "/"
+      });
+      res.send({
         status: "session cookie set"
       });
     } else {
-      res.cookie("token", "");
-      res.json({
+      res.setCookie("token", null, {
+        domain: req.headers.host,
+        path: "/"
+      });
+      res.send({
         status: "session cookie not set"
       });
     }
