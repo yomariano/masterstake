@@ -17,13 +17,22 @@
     }
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yomariano/masterstake.git"
   },
-  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
+  "keywords": [
+    "Proof of Stake",
+    "Masternode",
+    "PIVX",
+    "DASH",
+    "Crytocurrency"
+  ],
   "author": {
     "name": "Mariano Rodriguez",
     "email": "yomariano05@gmail.com",
