@@ -5,19 +5,10 @@
   "main": "index.js",
   "scripts": {
     "server-dev": "./node_modules/nodemon/bin/nodemon.js ./api/src/index.js",
-    "test": "./node_modules/tap/bin/run.js './{,!(node_modules)/**}/*.test.js'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "cd api/src && npm test"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "test": "./node_modules/tap/bin/run.js './{,!(node_modules)/**}/*.test.js'",
+    "start": "node ./api/src",
+    "docker-build": "./scripts/build.sh",
+    "docker-start": "./scripts/start.sh"
   },
   "repository": {
     "type": "git",
@@ -56,8 +47,6 @@
     "passport-google-oauth": "^1.0.0"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
     "nodemon": "^1.17.2",
     "prettier": "^1.11.1",
     "tap": "^11.1.2"
