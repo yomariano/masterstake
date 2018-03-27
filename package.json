@@ -1,0 +1,44 @@
+{
+  "name": "masterstake",
+  "version": "0.0.1",
+  "description": "Masterstake",
+  "main": "index.js",
+  "scripts": {
+    "server-dev": "./node_modules/nodemon/bin/nodemon.js ./api/src/index.js",
+    "test": "./node_modules/tap/bin/run.js './{,!(node_modules)/**}/*.test.js'",
+    "start": "node ./api/src",
+    "docker-build": "./scripts/build.sh",
+    "docker-start": "./scripts/start.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yomariano/masterstake.git"
+  },
+  "keywords": ["Proof of Stake", "Masternode", "PIVX", "DASH", "Crytocurrency"],
+  "author": {
+    "name": "Mariano Rodriguez",
+    "email": "yomariano05@gmail.com",
+    "url": "http://github.com/yomariano05)"
+  },
+  "contributors": [
+    "Alejandro Garcia Robles <agrcrobles@gmail.com> (http://github.com/agrcrobles)",
+    "Fernando Callejon <fcallejon@gmail.com> (http://github.com/fcallejon)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yomariano/masterstake/issues"
+  },
+  "homepage": "https://github.com/yomariano/masterstake#readme",
+  "dependencies": {
+    "fastify": "^1.1.1",
+    "fastify-multipart": "^0.4.1",
+    "fastify-plugin": "^0.2.2",
+    "mongoose": "^5.0.10",
+    "nconf": "^0.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2",
+    "prettier": "^1.11.1",
+    "tap": "^11.1.2"
+  }
+}

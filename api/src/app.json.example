@@ -1,0 +1,9 @@
+{
+  "store": {
+    "host": "host",
+    "port": "00000",
+    "dbName": "dbName",
+    "user": "user",
+    "passwd": "passwd"
+  }
+}
