@@ -1,8 +1,10 @@
 const Fastify = require("fastify");
 const nconf = require("nconf");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const postSignin = require("./endpoints/postSignin");
+const postSignupGoogle = require("./endpoints/postSignupGoogle");
 const postJoin = require("./endpoints/postJoin");
 const getMasternodes = require("./endpoints/getMasternodes");
 const getMyMasternodes = require("./endpoints/getMyMasternodes");
@@ -15,7 +17,7 @@ function buildFastify() {
   const fastify = Fastify();
 
   fastify.register(require("fastify-multipart"));
-
+  fastify.use(cors());
   nconf
     .argv()
     .env()
@@ -50,6 +52,7 @@ function buildFastify() {
   fastify.route(getMyMasternodes);
   fastify.route(postSignin);
   fastify.route(postJoin);
+  fastify.route(postSignupGoogle);
 
   return fastify;
 }
