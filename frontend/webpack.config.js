@@ -1,11 +1,13 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 
 module.exports = {
-  entry: {
-    index: './src/index.js',
-    // another: './src/another-module.js'
-  },
+  entry: [
+    './src/index.js',
+    './src/assets/sass/main.scss',
+    './src/assets/sass/ie9.scss'
+  ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -28,10 +30,6 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.css$/,
-        loaders: ["style-loader","css-loader"]
-      },
       // {
       //   test: /\.(png|jpg|gif|svg)$/,
       //   use: [
@@ -43,6 +41,12 @@ module.exports = {
       //     }
       //   ]
       // },
+      { // css / sass / scss loader for webpack
+        test: /\.(css|sass|scss)$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader'],
+        })
+      },
       {
         test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/,
         use: [
@@ -57,6 +61,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin({
+      filename: '[name].css',
+    }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"

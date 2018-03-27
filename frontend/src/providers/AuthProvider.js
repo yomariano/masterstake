@@ -1,27 +1,20 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { render } from "react-dom";
-import PropTypes from "prop-types";
 
-export const AuthContext = React.createContext();
+import { Provider } from 'unistore/react';
 
-//export const AuthConsumer = AuthContext.AuthConsumer;
+import createStore from 'unistore'
 
-export class AuthProvider extends Component {
-  static propTypes = {
-    children: PropTypes.any
-  };
+let initialState = { appState: "unauthenticated" };
 
-  state = {
-    isLogged: false
-  };
+let store = createStore(initialState);
 
+export class AuthProvider extends PureComponent {
   render() {
     return (
-      <div>
-        <AuthContext.Provider value={this.state}>
+      <Provider store={store}>
           {this.props.children}
-        </AuthContext.Provider>
-      </div>
+      </Provider>
     );
   }
 }

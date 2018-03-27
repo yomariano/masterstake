@@ -2,7 +2,9 @@ console.log(`header`);
 import React from "react";
 // import { Link } from "react-router-dom";
 import TwitterLogin from "react-twitter-auth/lib/react-twitter-auth-component.js";
-import {AuthContext} from "../providers/AuthProvider";
+import { connect } from 'unistore/react'
+
+import { removeItem } from "./localstorage";
 
 //   <header>
 //     <nav>
@@ -13,7 +15,7 @@ import {AuthContext} from "../providers/AuthProvider";
 //       </ul>
 //     </nav>
 //   </header>
-const Header = () => (
+const Header = ({ appState, login, logout }) => (
   <header id="header" className="alt">
     <h1 id="logo">
       <a href="index.html">
@@ -63,31 +65,24 @@ const Header = () => (
           </ul>
         </li>
         <li>
-          <AuthContext.Consumer>
-            {context => (
-              <React.Fragment>
-				  {(function() {
-                switch(context.isLogged) {
-                    case true:
-                        return <a href="#" className="button special">
-								Log In
-								</a>;
-                    case false:
-                        return <a href="#" className="button special">
-								Log Out
-								</a>
-                    default:
-                        return null;
-                }
-            })()}
-                
-              </React.Fragment>
-            )}
-          </AuthContext.Consumer>
+          {/* {appState === "unauthenticated" && <a onClick={login} href="#" className="button special">
+            Log In
+          </a>} */}
+          {appState === "authenticated" && <a href="#" onClick={logout} className="button special">
+            Log Out
+          </a>}
         </li>
       </ul>
     </nav>
   </header>
 );
 
-export default Header;
+// If actions is a function, it gets passed the store:
+const actions = store => ({
+  // Actions can just return a state update:
+  logout() {
+    removeItem('jwtToken');
+    return { appState: "unauthenticated" };
+  },
+});
+export default connect('appState', actions)(Header);
