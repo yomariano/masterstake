@@ -1,6 +1,6 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   entry: [
@@ -10,7 +10,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -18,33 +19,22 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
             options: { minimize: true }
           }
         ]
       },
-      // {
-      //   test: /\.(png|jpg|gif|svg)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: 'images/[name].[ext]'
-      //       }  
-      //     }
-      //   ]
-      // },
       { // css / sass / scss loader for webpack
         test: /\.(css|sass|scss)$/,
         use: ExtractTextPlugin.extract({
-          use: ['css-loader', 'sass-loader'],
+          use: ['css-loader', 'sass-loader']
         })
       },
       {
@@ -53,20 +43,23 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 4096,
+              limit: 4096
             }
           }
         ]
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: '[name].css'
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html',
+      filename: './index.html'
     })
   ]
-};
+}

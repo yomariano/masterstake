@@ -1,29 +1,15 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import pic02 from "../images/pic02.jpg";
-import pic03 from "../images/pic03.jpg";
-import pic04 from "../images/pic04.jpg";
-import Header from "./Header";
-import Banner from "./Banner";
-import Main from "./Main";
- import { AuthProvider } from "../providers/AuthProvider";
-
-// import ErrorBoundary from "./ErrorBoundary";
-// import PropTypes from "prop-types";
+import React, { Component } from 'react'
+import { AuthProvider } from '../providers/AuthProvider'
+import Routes from '../routes'
 
 class App extends Component {
-  
-  render() {
+  render () {
     return (
-		 <AuthProvider>
-			<div>
-				<Header />
-				<Main />
-				<Banner />
-			</div>
-		 </AuthProvider>
-    );
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    )
   }
 }
 
-export default App;
+export default App

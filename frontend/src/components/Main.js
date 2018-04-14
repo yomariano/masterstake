@@ -1,9 +1,4 @@
-console.log(`main`);
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import Home from "./Home";
-import Dashboard from "./Dashboard";
-import Masternodes from "./Masternodes";
+import React from 'react'
 
 const Main = () => (
   <main>
@@ -13,6 +8,6 @@ const Main = () => (
       <Route path="/masternodes" component={Masternodes} />
     </Switch> */}
   </main>
-);
+)
 
-export default Main;
+export default Main

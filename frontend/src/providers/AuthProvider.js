@@ -1,20 +1,17 @@
-import React, { PureComponent } from "react";
-import { render } from "react-dom";
-
-import { Provider } from 'unistore/react';
-
+import React, { PureComponent } from 'react'
+import { Provider } from 'unistore/react'
 import createStore from 'unistore'
 
-let initialState = { appState: "unauthenticated" };
+let initialState = {
+  appState: 'unauthenticated',
+  name: '',
+  picture: ''
+}
 
-let store = createStore(initialState);
+let store = createStore(initialState)
 
 export class AuthProvider extends PureComponent {
-  render() {
-    return (
-      <Provider store={store}>
-          {this.props.children}
-      </Provider>
-    );
+  render () {
+    return <Provider store={store}>{this.props.children}</Provider>
   }
 }
