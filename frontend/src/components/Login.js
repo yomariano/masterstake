@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TwitterLogin from 'react-twitter-auth/lib/react-twitter-auth-component.js'
+//import TwitterLogin from 'react-twitter-auth/lib/react-twitter-auth-component.js'
 import GoogleLogin from 'react-google-login'
 import { connect } from 'unistore/react'
 import { setItem, getItem } from './localstorage'
@@ -22,7 +22,7 @@ const fetchServer = jwtToken => {
 }
 
 class Login extends Component {
-  state = {
+  state = { // eslint-disable-line
     response: {}
   };
   onSuccess = response => {

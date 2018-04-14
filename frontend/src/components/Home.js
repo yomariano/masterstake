@@ -58,8 +58,8 @@ const Home = ({ appState, name, picture, logout }) => (
       </div>
     </section>
     <article id='main'>
-      <header class='special container'>
-        <span class='icon fa-bar-chart-o' />
+      <header className='special container'>
+        <span className='icon fa-bar-chart-o' />
         <h2>
           As this is my <strong>twentieth</strong> freebie for HTML5 UP
           <br />
@@ -82,9 +82,9 @@ const Home = ({ appState, name, picture, logout }) => (
         </p>
       </header>
 
-      <section class='wrapper style2 container special-alt'>
-        <div class='row 50%'>
-          <div class='8u 12u(narrower)'>
+      <section className='wrapper style2 container special-alt'>
+        <div className='row 50%'>
+          <div className='8u 12u(narrower)'>
             <header>
               <h2>
                 Behold the <strong>icons</strong> that visualize what you’re all
@@ -99,45 +99,45 @@ const Home = ({ appState, name, picture, logout }) => (
               commodo.
             </p>
             <footer>
-              <ul class='buttons'>
+              <ul className='buttons'>
                 <li>
-                  <a href='#' class='button'>
+                  <a href='#' className='button'>
                     Find Out More
                   </a>
                 </li>
               </ul>
             </footer>
           </div>
-          <div class='4u 12u(narrower) important(narrower)'>
-            <ul class='featured-icons'>
+          <div className='4u 12u(narrower) important(narrower)'>
+            <ul className='featured-icons'>
               <li>
-                <span class='icon fa-clock-o'>
-                  <span class='label'>Feature 1</span>
+                <span className='icon fa-clock-o'>
+                  <span className='label'>Feature 1</span>
                 </span>
               </li>
               <li>
-                <span class='icon fa-volume-up'>
-                  <span class='label'>Feature 2</span>
+                <span className='icon fa-volume-up'>
+                  <span className='label'>Feature 2</span>
                 </span>
               </li>
               <li>
-                <span class='icon fa-laptop'>
-                  <span class='label'>Feature 3</span>
+                <span className='icon fa-laptop'>
+                  <span className='label'>Feature 3</span>
                 </span>
               </li>
               <li>
-                <span class='icon fa-inbox'>
-                  <span class='label'>Feature 4</span>
+                <span className='icon fa-inbox'>
+                  <span className='label'>Feature 4</span>
                 </span>
               </li>
               <li>
-                <span class='icon fa-lock'>
-                  <span class='label'>Feature 5</span>
+                <span className='icon fa-lock'>
+                  <span className='label'>Feature 5</span>
                 </span>
               </li>
               <li>
-                <span class='icon fa-cog'>
-                  <span class='label'>Feature 6</span>
+                <span className='icon fa-cog'>
+                  <span className='label'>Feature 6</span>
                 </span>
               </li>
             </ul>
@@ -145,11 +145,11 @@ const Home = ({ appState, name, picture, logout }) => (
         </div>
       </section>
 
-      <section class='wrapper style1 container special'>
-        <div class='row'>
-          <div class='4u 12u(narrower)'>
+      <section className='wrapper style1 container special'>
+        <div className='row'>
+          <div className='4u 12u(narrower)'>
             <section>
-              <span class='icon featured fa-check' />
+              <span className='icon featured fa-check' />
               <header>
                 <h3>This is Something</h3>
               </header>
@@ -160,9 +160,9 @@ const Home = ({ appState, name, picture, logout }) => (
               </p>
             </section>
           </div>
-          <div class='4u 12u(narrower)'>
+          <div className='4u 12u(narrower)'>
             <section>
-              <span class='icon featured fa-check' />
+              <span className='icon featured fa-check' />
               <header>
                 <h3>Also Something</h3>
               </header>
@@ -173,9 +173,9 @@ const Home = ({ appState, name, picture, logout }) => (
               </p>
             </section>
           </div>
-          <div class='4u 12u(narrower)'>
+          <div className='4u 12u(narrower)'>
             <section>
-              <span class='icon featured fa-check' />
+              <span className='icon featured fa-check' />
               <header>
                 <h3>Probably Something</h3>
               </header>
@@ -189,17 +189,17 @@ const Home = ({ appState, name, picture, logout }) => (
         </div>
       </section>
 
-      <section class='wrapper style3 container special'>
-        <header class='major'>
+      <section className='wrapper style3 container special'>
+        <header className='major'>
           <h2>
             Next look at this <strong>cool stuff</strong>
           </h2>
         </header>
 
-        <div class='row'>
-          <div class='6u 12u(narrower)'>
+        <div className='row'>
+          <div className='6u 12u(narrower)'>
             <section>
-              <a href='#' class='image featured'>
+              <a href='#' className='image featured'>
                 <img src='images/pic01.jpg' alt='' />
               </a>
               <header>
@@ -213,9 +213,9 @@ const Home = ({ appState, name, picture, logout }) => (
               </p>
             </section>
           </div>
-          <div class='6u 12u(narrower)'>
+          <div className='6u 12u(narrower)'>
             <section>
-              <a href='#' class='image featured'>
+              <a href='#' className='image featured'>
                 <img src='images/pic02.jpg' alt='' />
               </a>
               <header>
@@ -230,10 +230,10 @@ const Home = ({ appState, name, picture, logout }) => (
             </section>
           </div>
         </div>
-        <div class='row'>
-          <div class='6u 12u(narrower)'>
+        <div className='row'>
+          <div className='6u 12u(narrower)'>
             <section>
-              <a href='#' class='image featured'>
+              <a href='#' className='image featured'>
                 <img src='images/pic03.jpg' alt='' />
               </a>
               <header>
@@ -247,9 +247,9 @@ const Home = ({ appState, name, picture, logout }) => (
               </p>
             </section>
           </div>
-          <div class='6u 12u(narrower)'>
+          <div className='6u 12u(narrower)'>
             <section>
-              <a href='#' class='image featured'>
+              <a href='#' className='image featured'>
                 <img src='images/pic04.jpg' alt='' />
               </a>
               <header>
@@ -265,10 +265,10 @@ const Home = ({ appState, name, picture, logout }) => (
           </div>
         </div>
 
-        <footer class='major'>
-          <ul class='buttons'>
+        <footer className='major'>
+          <ul className='buttons'>
             <li>
-              <a href='#' class='button'>
+              <a href='#' className='button'>
                 See More
               </a>
             </li>
@@ -279,35 +279,35 @@ const Home = ({ appState, name, picture, logout }) => (
     </article>
 
     <footer id='footer'>
-      <ul class='icons'>
+      <ul className='icons'>
         <li>
-          <a href='#' class='icon circle fa-twitter'>
-            <span class='label'>Twitter</span>
+          <a href='#' className='icon circle fa-twitter'>
+            <span className='label'>Twitter</span>
           </a>
         </li>
         <li>
-          <a href='#' class='icon circle fa-facebook'>
-            <span class='label'>Facebook</span>
+          <a href='#' className='icon circle fa-facebook'>
+            <span className='label'>Facebook</span>
           </a>
         </li>
         <li>
-          <a href='#' class='icon circle fa-google-plus'>
-            <span class='label'>Google+</span>
+          <a href='#' className='icon circle fa-google-plus'>
+            <span className='label'>Google+</span>
           </a>
         </li>
         <li>
-          <a href='#' class='icon circle fa-github'>
-            <span class='label'>Github</span>
+          <a href='#' className='icon circle fa-github'>
+            <span className='label'>Github</span>
           </a>
         </li>
         <li>
-          <a href='#' class='icon circle fa-dribbble'>
-            <span class='label'>Dribbble</span>
+          <a href='#' className='icon circle fa-dribbble'>
+            <span className='label'>Dribbble</span>
           </a>
         </li>
       </ul>
 
-      <ul class='copyright'>
+      <ul className='copyright'>
         <li>&copy; Untitled</li>
         <li>
             Design: <a href='http://html5up.net'>HTML5 UP</a>
